@@ -1,4 +1,4 @@
-package com;
+package 泛型;
 
 import java.util.HashMap;
 import java.util.Stack;
