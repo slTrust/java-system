@@ -1,23 +1,21 @@
 package com.littlejava.view;
 
 import com.littlejava.model.News;
+import com.littlejava.model.Viewable;
 
 import java.util.ArrayList;
 
-public class NewsListView {
-    private ArrayList<News> newsList;
+public class ListView {
+    private ArrayList<Viewable> viewableList;
 
-    public NewsListView(ArrayList<News> newsList) {
-        this.newsList = newsList;
+    public ListView(ArrayList<Viewable> viewableList) {
+        this.viewableList = viewableList;
     }
 
     public void display(){
-        for (News news: newsList) {
-            // 转移到 News 内部 因为扩展后 display 变了
+        for (Viewable viewItem: viewableList) {
             System.out.println("---------------------------------");
-            // System.out.println("|Title| " + news.getTitle());
-            // System.out.println("|Content| " + news.getContent());
-            news.display();
+            viewItem.display();
         }
     }
 
